@@ -1,4 +1,4 @@
-# libft tester
+# Basic-libft-tester
 
 A simple tester for the 42 libft project. Tests all mandatory Part 1 functions with edge cases and compares results against the standard C library.
 
@@ -12,24 +12,34 @@ A simple tester for the 42 libft project. Tests all mandatory Part 1 functions w
 
 ## Setup
 
-Copy all three files into your libft folder — the one that contains your `Makefile` and `libft.h`.
+Clone this repo **inside** your libft folder:
+
+```bash
+cd your_libft/
+git clone https://github.com/yourname/Basic-libft-tester.git
+```
+
+Your folder structure should look like this:
 
 ```
 your_libft/
 ├── Makefile
 ├── libft.h
 ├── ft_*.c
-├── test_libft.c
-├── stubs.c
-└── run_test.sh
+└── Basic-libft-tester/
+    ├── test_libft.c
+    ├── stubs.c
+    ├── run_test.sh
+    └── README.md
 ```
 
 ## Usage
 
-Run the tester with:
+Run the tester from inside your libft folder — **not** from inside the tester folder:
 
 ```bash
-bash run_test.sh
+cd your_libft/
+bash Basic-libft-tester/run_test.sh
 ```
 
 This will:

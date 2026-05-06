@@ -2,7 +2,7 @@
 /*                                                                            */
 /*   test_libft.c - Comprehensive tester for libft functions                  */
 /*                                                                            */
-/*   Usage: gcc test_libft.c -L. -lft -o test_libft && ./test_libft           */
+/*   Usage: bash Basic-libft-tester/run_test.sh                               */
 /*                                                                            */
 /* ************************************************************************** */
 
