@@ -4,10 +4,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stddef.h>
+#include "libft.h"
 
-/* comment out each stub once the real function is in libft.a */
+/* ---- Part 1 — comment out once implemented ---- */
 
 //int		ft_isalpha(int c)						{ (void)c; return (-1); }
 //int		ft_isdigit(int c)						{ (void)c; return (-1); }
@@ -33,12 +33,29 @@
 //int		ft_strncmp(const char *s1, const char *s2, size_t n) { (void)s1; (void)s2; (void)n; return (0); }
 //int		ft_atoi(const char *s)					{ (void)s; return (0); }
 //void	*ft_calloc(size_t n, size_t size)		{ (void)n; (void)size; return (NULL); }
+
+/* ---- Part 2 — comment out once implemented ---- */
+
+//char	*ft_substr(char const *s, unsigned int start, size_t len) { (void)s; (void)start; (void)len; return (NULL); }
+//char	*ft_strjoin(char const *s1, char const *s2) { (void)s1; (void)s2; return (NULL); }
+//char	*ft_strtrim(char const *s1, char const *set) { (void)s1; (void)set; return (NULL); }
+//char	**ft_split(char const *s, char c)		{ (void)s; (void)c; return (NULL); }
+//char	*ft_itoa(int n)							{ (void)n; return (NULL); }
+//char	*ft_strmapi(char const *s, char (*f)(unsigned int, char)) { (void)s; (void)f; return (NULL); }
+//void	ft_striteri(char *s, void (*f)(unsigned int, char *)) { (void)s; (void)f; }
+//void	ft_putchar_fd(char c, int fd)			{ (void)c; (void)fd; }
+//void	ft_putstr_fd(char *s, int fd)			{ (void)s; (void)fd; }
+//void	ft_putendl_fd(char *s, int fd)			{ (void)s; (void)fd; }
+//void	ft_putnbr_fd(int n, int fd)				{ (void)n; (void)fd; }
+
+/* ---- Part 3 linked list — comment out once implemented ---- */
+
 //t_list	*ft_lstnew(void *content)						{ (void)content; return (NULL); }
-//void		ft_lstadd_front(t_list **lst, t_list *new)		{ (void)lst; (void)new; }
+//void	ft_lstadd_front(t_list **lst, t_list *new)		{ (void)lst; (void)new; }
 //int		ft_lstsize(t_list *lst)							{ (void)lst; return (0); }
 //t_list	*ft_lstlast(t_list *lst)						{ (void)lst; return (NULL); }
-//void		ft_lstadd_back(t_list **lst, t_list *new)		{ (void)lst; (void)new; }
-//void		ft_lstdelone(t_list *lst, void (*del)(void *))	{ (void)lst; (void)del; }
-//void		ft_lstclear(t_list **lst, void (*del)(void *))	{ (void)lst; (void)del; }
-//void		ft_lstiter(t_list *lst, void (*f)(void *))		{ (void)lst; (void)f; }
+//void	ft_lstadd_back(t_list **lst, t_list *new)		{ (void)lst; (void)new; }
+//void	ft_lstdelone(t_list *lst, void (*del)(void *))	{ (void)lst; (void)del; }
+//void	ft_lstclear(t_list **lst, void (*del)(void *))	{ (void)lst; (void)del; }
+//void	ft_lstiter(t_list *lst, void (*f)(void *))		{ (void)lst; (void)f; }
 //t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *)) { (void)lst; (void)f; (void)del; return (NULL); }
