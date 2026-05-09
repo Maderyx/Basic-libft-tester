@@ -229,10 +229,10 @@ static void test_memchr_memcmp(void)
     CHECK_PTR("find '\\0'",     memchr(s, '\0', 6),  ft_memchr(s, '\0', 6));
 
     SECTION("ft_memcmp");
-    CHECK_INT("equal",          memcmp("abc", "abc", 3),    ft_memcmp("abc", "abc", 3));
+    CHECK_INT("equal",          memcmp("abc", "abc", 3)==0,   ft_memcmp("abc", "abc", 3)==0);
     CHECK_INT("less",           memcmp("abc", "abd", 3)<0,  ft_memcmp("abc", "abd", 3)<0);
     CHECK_INT("greater",        memcmp("abd", "abc", 3)>0,  ft_memcmp("abd", "abc", 3)>0);
-    CHECK_INT("n=0",            memcmp("abc", "xyz", 0),    ft_memcmp("abc", "xyz", 0));
+    CHECK_INT("n=0",            memcmp("abc", "xyz", 0)==0,   ft_memcmp("abc", "xyz", 0)==0);
     CHECK_INT("non-ascii \\200",memcmp("test\200","test\0",6)>0, ft_memcmp("test\200","test\0",6)>0);
 }
 
@@ -421,7 +421,6 @@ static void test_calloc(void)
 /* ================================================================ */
 /*  ft_strcpy                                                        */
 /* ================================================================ */
-static void test_strcpy(void)
 {
     SECTION("ft_strcpy");
     char dst[20];
@@ -468,7 +467,6 @@ int     main(void)
     test_atoi();
     test_strdup();
     test_calloc();
-    test_strcpy();
     summary();
     return (failed > 0);
 }
