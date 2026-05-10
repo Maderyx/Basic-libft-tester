@@ -317,8 +317,10 @@ static void	test_strlcat(void)
 	CHECK_STR("truncated append",    "hello w",      dst);
 
 	ft_strlcpy(dst, "hello", 20);
-	CHECK_INT("return total len",    ft_strlcat(dst, "!!", 20),  7);
-	ft_strlcpy(dst, "hello", 20);
+	{
+		size_t	res = ft_strlcat(dst, "!!", 20);
+		CHECK_INT("return total len",    res,  7);
+	}
 
 	ft_strlcpy(dst, "hello", 20);
 	CHECK_INT("dstsize=0 return",    ft_strlcat(dst, "abc", 0),  8);
