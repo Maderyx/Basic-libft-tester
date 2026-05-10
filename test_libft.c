@@ -318,6 +318,7 @@ static void	test_strlcat(void)
 
 	ft_strlcpy(dst, "hello", 20);
 	CHECK_INT("return total len",    ft_strlcat(dst, "!!", 20),  7);
+	ft_strlcpy(dst, "hello", 20);
 
 	ft_strlcpy(dst, "hello", 20);
 	CHECK_INT("dstsize=0 return",    ft_strlcat(dst, "abc", 0),  8);
