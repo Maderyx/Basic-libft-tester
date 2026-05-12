@@ -99,6 +99,18 @@ static void test_substr(void)
 	res = ft_substr("", 0, 5);
 	CHECK_STR("empty string",              "",       res);
 	free(res);
+
+	res = ft_substr("hello", 4, 1);
+	CHECK_STR("last char only",            "o",      res);
+	free(res);
+
+	res = ft_substr("hello", 5, 5);
+	CHECK_STR("start at null term",        "",       res);
+	free(res);
+
+	res = ft_substr("hello", 2, 100);
+	CHECK_STR("len overflow past end",     "llo",    res);
+	free(res);
 }
 
 /* ================================================================ */
