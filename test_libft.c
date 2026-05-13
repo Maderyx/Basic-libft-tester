@@ -326,7 +326,7 @@ static void	test_strlcat(void)
 	CHECK_INT("dstsize=0 return",    ft_strlcat(dst, "abc", 0),  3);
 
 	ft_strlcpy(dst, "rrrrrr", 20);
-	CHECK_INT("dst>=n return",       ft_strlcat(dst, "lorem ipsum dolor sit amet", 5),  32);
+	CHECK_INT("dst>=n return",       ft_strlcat(dst, "lorem ipsum dolor sit amet", 5),  31);
 }
 
 /* ================================================================ */
