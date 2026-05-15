@@ -193,22 +193,31 @@ static void test_split(void)
 	int		i;
 
 	res = ft_split("hello world foo", ' ');
-	CHECK_STR("split[0]",                  "hello",  res[0]);
-	CHECK_STR("split[1]",                  "world",  res[1]);
-	CHECK_STR("split[2]",                  "foo",    res[2]);
-	CHECK_PTR("split NULL terminated",     NULL,     res[3]);
-	i = 0; while (res[i]) free(res[i++]); free(res);
+	if (res)
+	{
+		CHECK_STR("split[0]",                  "hello",  res[0]);
+		CHECK_STR("split[1]",                  "world",  res[1]);
+		CHECK_STR("split[2]",                  "foo",    res[2]);
+		CHECK_PTR("split NULL terminated",     NULL,     res[3]);
+		i = 0; while (res[i]) free(res[i++]); free(res);
+	}
 
 	res = ft_split("  hello  world  ", ' ');
-	CHECK_STR("multiple delimiters [0]",   "hello",  res[0]);
-	CHECK_STR("multiple delimiters [1]",   "world",  res[1]);
-	CHECK_PTR("NULL terminated",           NULL,     res[2]);
-	i = 0; while (res[i]) free(res[i++]); free(res);
+	if (res)
+	{
+		CHECK_STR("multiple delimiters [0]",   "hello",  res[0]);
+		CHECK_STR("multiple delimiters [1]",   "world",  res[1]);
+		CHECK_PTR("NULL terminated",           NULL,     res[2]);
+		i = 0; while (res[i]) free(res[i++]); free(res);
+	}
 
 	res = ft_split("hello", ' ');
-	CHECK_STR("no delimiter in string",    "hello",  res[0]);
-	CHECK_PTR("NULL terminated",           NULL,     res[1]);
-	i = 0; while (res[i]) free(res[i++]); free(res);
+	if (res)
+	{
+		CHECK_STR("no delimiter in string",    "hello",  res[0]);
+		CHECK_PTR("NULL terminated",           NULL,     res[1]);
+		i = 0; while (res[i]) free(res[i++]); free(res);
+	}
 
 	res = ft_split("", ' ');
 	CHECK_PTR("empty string returns NULL", NULL,     res[0]);
@@ -219,12 +228,15 @@ static void test_split(void)
 	free(res);
 
 	res = ft_split("a,b,c,d", ',');
-	CHECK_STR("comma delimiter [0]",       "a",      res[0]);
-	CHECK_STR("comma delimiter [1]",       "b",      res[1]);
-	CHECK_STR("comma delimiter [2]",       "c",      res[2]);
-	CHECK_STR("comma delimiter [3]",       "d",      res[3]);
-	CHECK_PTR("NULL terminated",           NULL,     res[4]);
-	i = 0; while (res[i]) free(res[i++]); free(res);
+	if (res)
+	{
+		CHECK_STR("comma delimiter [0]",       "a",      res[0]);
+		CHECK_STR("comma delimiter [1]",       "b",      res[1]);
+		CHECK_STR("comma delimiter [2]",       "c",      res[2]);
+		CHECK_STR("comma delimiter [3]",       "d",      res[3]);
+		CHECK_PTR("NULL terminated",           NULL,     res[4]);
+		i = 0; while (res[i]) free(res[i++]); free(res);
+	}
 }
 
 /* ================================================================ */
